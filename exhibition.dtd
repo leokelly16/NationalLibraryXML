@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ENTITY % visitor SYSTEM "visitor.dtd">
+%visitor;
+
+<!ENTITY % showpiece SYSTEM "showpiece.dtd">
+%showpiece;
+
+<!ELEMENT NationalLibrary (Exhibition+)>
+<!ELEMENT Exhibition (title, description, Visitors, Showpieces)>
+<!ATTLIST Exhibition exhibitionID CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>

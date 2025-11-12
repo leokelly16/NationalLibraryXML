@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Showpieces SYSTEM "showpiece.dtd">
+<Showpieces>
+  <Showpiece id="0542">
+    <name>The Lake Isle of Inisfree (1924 Facsimile)</name>
+    <material>Paper, printed handwriting</material>
+    <dateOfRelevance>1924-01-01</dateOfRelevance>
+  </Showpiece>
+  <Showpiece id="0543">
+    <name>Easter 1916</name>
+    <material>Paper, fly leaf of a book</material>
+    <dateOfRelevance>1916-09-25</dateOfRelevance>
+  </Showpiece>
+  
+  <Showpiece id="0622">
+    <name>First Edition of Ulysses</name>
+    <material>Paper, leather</material>
+    <dateOfRelevance>1922-02-02</dateOfRelevance>
+  </Showpiece>
+  <Showpiece id="0623">
+    <name>The Great Gatsby Manuscript</name>
+    <material>Paper, typed</material>
+    <dateOfRelevance>1925-04-10</dateOfRelevance>
+  </Showpiece>
+</Showpieces>
