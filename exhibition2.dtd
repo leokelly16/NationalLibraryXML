@@ -1,0 +1,15 @@
+<--Exhibition Class and relationships-->
+
+<!DOCTYPE Exhibition[
+<!ELEMENT Exhibition(Exhibition+)>
+<!ATTLIST Exhibition exhibitionID CDATA #REQUIRED>
+<!ELEMENT Exhibition(title*,description?,Visitor*,showpieces*)>
+<!ELEMENT Visitor(name+,email*,visitorID+)>
+<!ELEMENT showpieces(name*,material+,dateOfRelevance?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT visitorID (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT material (#PCDATA)>
+<!ELEMENT dateOfRelevance (#PCDATA)>
+]>

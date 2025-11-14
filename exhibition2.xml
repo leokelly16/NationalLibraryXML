@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Exhibition>
+ <Exhibition exhibitionID="12345">
+    <Exhibition.title>Books</title>
+    <Exhibition.description>Exhibition on new Books</description>
+    <Exhibition.visitor>
+	   <visitor.name>Andreas</visitor.name>
+	   <visitor.email>andreas15@gmail.com</visitor.email>
+	   <visitor.visitorID>12345</visitor.visitorID>
+	</Exhibition.visitor>
+      <Exhibition.showpieces> 
+	         <Showpiece.name>Piece1</Showpiece.name>
+		 <Showpiece.material>Cloth</Showpiece.material>
+		 <Showpiece.dateOfRelevance>15/04/2004</Showpiece.dateOfRelevance>
+	  </Exhibition.showpieces>
+ </Exhibition>
+</Exhibition>
