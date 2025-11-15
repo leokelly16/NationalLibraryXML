@@ -4,7 +4,7 @@
            <Booking.visitorID>12345</Booking.visitorID>
 	   <Booking.dateOfBooking>15/04/2004</Booking.dateOfBooking>
 	 <Billing>
-	   <Billing.orderID>1234</Billng.orderID>
+	   <Billing.orderID>1234</Billing.orderID>
 	   <Billing.orderDate>15/04/2004</Billing.orderDate>
 	   <Billing.amountPaid>200 euros</Billing.amountPaid>
 	 </Billing>

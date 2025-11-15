@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Exhibition>
  <Exhibition exhibitionID="12345">
-    <Exhibition.title>Books</title>
-    <Exhibition.description>Exhibition on new Books</description>
+    <Exhibition.title>Books</Exhibition.title>
+    <Exhibition.description>Exhibition on new Books</Exhibition.description>
     <Exhibition.visitor>
 	   <visitor.name>Andreas</visitor.name>
 	   <visitor.email>andreas15@gmail.com</visitor.email>

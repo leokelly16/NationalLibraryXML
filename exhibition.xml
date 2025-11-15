@@ -4,7 +4,8 @@
   <Exhibition exhibitionID="207">
     <title>Yeats: The Life and Works of William Butler Yeats</title>
     <description>A collection of works and manuscripts from the Irish poet, W.B Yeats.</description>
-
+    <price>10.50</price>
+    <theme>Poetry</theme>
     <Visitors>
         <Visitor id="72981">
           <Visitor.name>Ellie Hartman</Visitor.name>
@@ -33,7 +34,8 @@
   <Exhibition exhibitionID="208">
     <title>Modern Literature Showcase</title>
     <description>Celebrating 20th-century literary classics and authors.</description>
-
+    <price>12.00</price>
+    <theme>Literary</theme>
     <Visitors>
         <Visitor id="52791">
           <Visitor.name>Patrick Kineely</Visitor.name>

@@ -7,7 +7,9 @@
 %showpiece;
 
 <!ELEMENT NationalLibrary (Exhibition+)>
-<!ELEMENT Exhibition (title, description, Visitors, Showpieces)>
+<!ELEMENT Exhibition (title, description, price, theme, Visitors, Showpieces)>
 <!ATTLIST Exhibition exhibitionID CDATA #REQUIRED>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT theme (#PCDATA)>
