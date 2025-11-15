@@ -1,63 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE NationalLibrary SYSTEM "exhibition.dtd">
-<NationalLibrary>
-  <Exhibition exhibitionID="207">
+<!DOCTYPE nationalLibrary [
+  <!ELEMENT nationalLibrary (exhibition+)>
+  <!ELEMENT exhibition (title, description, price, theme, visitors, showpieces)>
+  <!ATTLIST exhibition exhibitionId CDATA #REQUIRED>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  <!ELEMENT theme (#PCDATA)>
+  
+  <!ELEMENT visitors (visitor*)>
+  <!ATTLIST visitor id CDATA #REQUIRED>
+  
+  <!ELEMENT showpieces (showpiece*)>
+  <!ATTLIST showpiece id CDATA #REQUIRED>
+]>
+<nationalLibrary>
+  <exhibition exhibitionId="207">
+  
     <title>Yeats: The Life and Works of William Butler Yeats</title>
     <description>A collection of works and manuscripts from the Irish poet, W.B Yeats.</description>
     <price>10.50</price>
     <theme>Poetry</theme>
-    <Visitors>
-        <Visitor id="72981">
-          <Visitor.name>Ellie Hartman</Visitor.name>
-          <Visitor.email>ehartman@gmail.com</Visitor.email>
-        </Visitor>
-        <Visitor id="72739">
-          <Visitor.name>James O'Connor</Visitor.name>
-          <Visitor.email>connor.james@gmail.com</Visitor.email>
-        </Visitor>
-    </Visitors>
+    
+    <visitors>
+      <visitor id="72981" />
+      <visitor id="72982" />
+    </visitors>
+    
+    <showpieces>
+      <showpiece id="0542" />
+      <showpiece id="0543" />
+    </showpieces>
+  </exhibition>
 
-    <Showpieces>
-      <Showpiece id="0542">
-        <name>The Lake Isle of Inisfree (1924 Facsimile)</name>
-        <material>Paper, printed handwriting</material>
-        <dateOfRelevance>1924-01-01</dateOfRelevance>
-      </Showpiece>
-      <Showpiece id="0543">
-        <name>Easter 1916</name>
-        <material>Paper, fly leaf of a book</material>
-        <dateOfRelevance>1916-09-25</dateOfRelevance>
-      </Showpiece>
-    </Showpieces>
-  </Exhibition>
-
-  <Exhibition exhibitionID="208">
+  <exhibition exhibitionId="208">
     <title>Modern Literature Showcase</title>
     <description>Celebrating 20th-century literary classics and authors.</description>
     <price>12.00</price>
     <theme>Literary</theme>
-    <Visitors>
-        <Visitor id="52791">
-          <Visitor.name>Patrick Kineely</Visitor.name>
-          <Visitor.email>kinpatrick02@gmail.com</Visitor.email>
-        </Visitor>
-        <Visitor id="72901">
-          <Visitor.name>Milly Donnolly</Visitor.name>
-          <Visitor.email>millydon98@gmail.com</Visitor.email>
-        </Visitor>
-    </Visitors>
-
-    <Showpieces>
-      <Showpiece id="0622">
-        <name>First Edition of Ulysses</name>
-        <material>Paper, leather</material>
-        <dateOfRelevance>1922-02-02</dateOfRelevance>
-      </Showpiece>
-      <Showpiece id="0623">
-        <name>The Great Gatsby Manuscript</name>
-        <material>Paper, typed</material>
-        <dateOfRelevance>1925-04-10</dateOfRelevance>
-      </Showpiece>
-    </Showpieces>
-  </Exhibition>
-</NationalLibrary>
+    
+    <visitors>
+      <visitor id="72983" />
+      <visitor id="72984" />
+    </visitors>
+    
+    <showpieces>
+      <showpiece id="0622" />
+      <showpiece id="0623" />
+    </showpieces>
+  </exhibition>
+</nationalLibrary>
