@@ -15,7 +15,7 @@
   <!ATTLIST showpiece id CDATA #REQUIRED>
 ]>
 <nationalLibrary>
-  <exhibition exhibitionId="207">
+  <exhibition id="207">
   
     <title>Yeats: The Life and Works of William Butler Yeats</title>
     <description>A collection of works and manuscripts from the Irish poet, W.B Yeats.</description>
@@ -33,7 +33,7 @@
     </showpieces>
   </exhibition>
 
-  <exhibition exhibitionId="208">
+  <exhibition id="208">
     <title>Modern Literature Showcase</title>
     <description>Celebrating 20th-century literary classics and authors.</description>
     <price>12.00</price>
