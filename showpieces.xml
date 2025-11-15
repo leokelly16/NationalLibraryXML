@@ -28,4 +28,9 @@
     <material>Paper, typed</material>
     <dateOfRelevance>1925-04-10</dateOfRelevance>
   </showpiece>
+  <showpiece id="00001">
+    <name>Piece1</name>
+    <material>Cloth</material>
+    <dateOfRelevance>2004-04-15</dateOfRelevance>
+  </showpiece>
 </showpieces>
