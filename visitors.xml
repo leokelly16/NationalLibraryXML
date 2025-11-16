@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE visitors [
   <!ELEMENT visitors (visitor+)>
-  <!ELEMENT visitor (name, email)>
+  <!ELEMENT visitor (name, email,nationality)>
   <!ATTLIST visitor id CDATA #REQUIRED>
   <!ELEMENT name (#PCDATA)>
   <!ELEMENT email (#PCDATA)>
+  <!ELEMENT nationality (#PCDATA)>
 ]>
 <visitors>
   <visitor id="72981">
     <name>Ellie Hartman</name>
     <email>ehartman@gmail.com</email>
+    <nationality>Irish</nationality>
   </visitor>
   <visitor id="72982">
     <name>James O'Connor</name>
     <email>connor.james@gmail.com</email>
+    <nationality>Irish</nationality>
   </visitor>
   <visitor id="72983">
     <name>Patrick Kineely</name>
     <email>kinpatrick02@gmail.com</email>
+    <nationality>Spanish</nationality>
   </visitor>
   <visitor id="72984">
     <name>Milly Donnolly</name>
     <email>millydon98@gmail.com</email>
+    <nationality>French</nationality>
   </visitor>
   <visitor id="72985">
     <name>Andreas Mama</name>
     <email>andreas15@gmail.com</email>
+    <nationality>Greek</nationality>
   </visitor>
 </visitors>
