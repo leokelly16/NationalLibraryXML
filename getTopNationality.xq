@@ -7,6 +7,9 @@ return
   return
     for $x in distinct-values($n)
     where count($n[. = $x]) = $most
-    return $x
+    return 
+    <MostOccurringNationality>
+    {$x}
+    </MostOccurringNationality>
 
 
