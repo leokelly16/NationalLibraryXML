@@ -1,0 +1,56 @@
+<!DOCTYPE chatbot[
+<!ELEMENT chatbot (chatbotSession*)>
+<!ATTLIST chatbotSession visitorID CDATA #REQUIRED>
+<!ELEMENT chatbotSession (language,sessionID,usedChatbot,sessionInMinutes,boughtTickets)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT sessionID (#PCDATA)>
+<!ELEMENT usedChatbot (#PCDATA)>
+<!ELEMENT sessionInMinutes (#PCDATA)>
+<!ELEMENT boughtTickets (#PCDATA)>
+]>
+
+
+<chatbot>
+
+  <chatbotSession visitorID ="72981" >
+   <language>English</language>
+   <sessionID>100<sessionID>
+   <usedChatbot>Yes</usedChatbot>
+   <sessionInMinutes>10</sessionInMinutes>
+   <boughtTickets>Yes</boughtTickets>
+  </chatbotSession>
+
+  <chatbotSession visitorID ="72982" >
+   <language>English</language>
+   <sessionID>101<sessionID>
+   <usedChatbot>No</usedChatbot>
+   <sessionInMinutes>0</sessionInMinutes>
+   <boughtTickets>No</boughtTickets>
+  </chatbotSession>
+
+  <chatbotSession visitorID ="72983" >
+   <language>Spanish</language>
+   <sessionID>102<sessionID>
+   <usedChatbot>Yes</usedChatbot>
+   <sessionInMinutes>25</sessionInMinutes>
+   <boughtTickets>No</boughtTickets>
+  </chatbotSession>
+
+  <chatbotSession visitorID ="72984" >
+   <language>French</language>
+   <sessionID>103<sessionID>
+   <usedChatbot>Yes</usedChatbot>
+   <sessionInMinutes>3</sessionInMinutes>
+   <boughtTickets>Yes</boughtTickets>
+  </chatbotSession>
+
+  <chatbotSession visitorID ="72985" >
+   <language>Greek</language>
+   <sessionID>104<sessionID>
+   <usedChatbot>Yes</usedChatbot>
+   <sessionInMinutes>8</sessionInMinutes>
+   <boughtTickets>Yes</boughtTickets>
+  </chatbotSession>
+
+
+</chatbot>
