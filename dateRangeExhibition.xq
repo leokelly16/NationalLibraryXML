@@ -1,4 +1,4 @@
-let $doc := doc("nationalLibrary.xml")
+let $doc := doc("exhibition.xml")
 
 for $ex in $doc/nationalLibrary/exhibition
 let $date := $ex/date/string()
