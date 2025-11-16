@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE feedbacks [
+  <!ELEMENT feedbacks (feedback+)>
+  <!ELEMENT feedback (visitor, exhibition, gaveFeedback, rating?, responseStatus?)>
+  <!ATTLIST feedback feedbackID CDATA #REQUIRED>
+  <!ELEMENT visitor EMPTY>
+  <!ATTLIST visitor id CDATA #REQUIRED>
+  <!ELEMENT exhibition EMPTY>
+  <!ATTLIST exhibition id CDATA #REQUIRED>
+  <!ELEMENT gaveFeedback (#PCDATA)>
+  <!ELEMENT rating (#PCDATA)>
+  <!ELEMENT responseStatus (#PCDATA)>
+
+]>
+
+<feedbacks>
+
+  <!-- Ellie visited exhibition 207 and gave feedback -->
+  <feedback feedbackID="F001">
+    <visitor id="72981" />
+    <exhibition id="207" />
+    <gaveFeedback>true</gaveFeedback>
+    <rating>5</rating>
+    <responseStatus>addressed</responseStatus>
+  </feedback>
+
+  <!-- James visited exhibition 207 but did not give feedback -->
+  <feedback feedbackID="F002">
+    <visitor id="72982" />
+    <exhibition id="207" />
+    <gaveFeedback>false</gaveFeedback>
+  </feedback>
+
+  <!-- Patrick visited exhibition 208 and gave feedback -->
+  <feedback feedbackID="F003">
+    <visitor id="72983" />
+    <exhibition id="208" />
+    <gaveFeedback>true</gaveFeedback>
+    <rating>4</rating>
+    <responseStatus>pending</responseStatus>
+  </feedback>
+
+  <!-- Milly visited exhibition 208 but did not give feedback -->
+  <feedback feedbackID="F004">
+    <visitor id="72984" />
+    <exhibition id="208" />
+    <gaveFeedback>false</gaveFeedback>
+  </feedback>
+  
+  <!-- Andreas visited exhibition 208 but did not give feedback -->
+  <feedback feedbackID="F005">
+    <visitor id="72985" />
+    <exhibition id="208" />
+    <gaveFeedback>true</gaveFeedback>
+	<rating>5</rating>
+    <responseStatus>pending</responseStatus>
+  </feedback>
+
+</feedbacks>
