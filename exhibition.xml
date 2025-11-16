@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nationalLibrary [
   <!ELEMENT nationalLibrary (exhibition+)>
-  <!ELEMENT exhibition (title, description, price, theme, visitors, showpieces)>
+  <!ELEMENT exhibition (title, description, price, theme, date, visitors, showpieces)>
   <!ATTLIST exhibition exhibitionId CDATA #REQUIRED>
   <!ELEMENT title (#PCDATA)>
   <!ELEMENT description (#PCDATA)>
@@ -21,6 +21,7 @@
     <description>A collection of works and manuscripts from the Irish poet, W.B Yeats.</description>
     <price>10.50</price>
     <theme>Poetry</theme>
+	<date>1/12/2025</date>
     
     <visitors>
       <visitor id="72981" />
@@ -38,6 +39,7 @@
     <description>Celebrating 20th-century literary classics and authors.</description>
     <price>12.00</price>
     <theme>Literary</theme>
+	<date>15/11/2025</date>
     
     <visitors>
       <visitor id="72983" />
