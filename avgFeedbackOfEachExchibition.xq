@@ -1,5 +1,5 @@
-let $fbDoc  := doc("feedbacks.xml")
-let $libDoc := doc("nationalLibrary.xml")
+let $fbDoc  := doc("feedback.xml")
+let $libDoc := doc("exhibition.xml")
 
 for $ex in $libDoc/nationalLibrary/exhibition
 let $exId := $ex/@id
