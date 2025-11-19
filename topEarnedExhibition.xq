@@ -3,7 +3,7 @@
 let $exhibitions := doc("exhibition.xml")/nationalLibrary/exhibition
 let $bookings    := doc("bookings.xml")/bookings/booking
 
-<!-- build a list of exhibitions with their total earnings -->
+(:build a list of exhibitions with their total earnings:)  
 let $exhWithEarnings :=
   for $e in $exhibitions
   let $total :=
