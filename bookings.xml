@@ -4,23 +4,70 @@
   <!ELEMENT booking (dateOfBooking, billing, visitors)>
   <!ATTLIST booking bookingId CDATA #REQUIRED>
   <!ELEMENT dateOfBooking (#PCDATA)>
-  <!ELEMENT billing (orderId, orderDate, amountPaid)>
+  <!ELEMENT billing (orderId, amountPaid)>
   <!ELEMENT orderId (#PCDATA)>
-  <!ELEMENT orderDate (#PCDATA)>
   <!ELEMENT amountPaid (#PCDATA)>
-  <!ELEMENT visitors (visitor*)>
+  <!ELEMENT visitors (visitor+)>
+  <!ELEMENT visitor EMPTY>
   <!ATTLIST visitor id CDATA #REQUIRED>
 ]>
+
 <bookings>
+  
   <booking bookingId="45678">
-    <dateOfBooking>2004-04-15</dateOfBooking>
+    <dateOfBooking>13/11/2025</dateOfBooking>
     <billing>
       <orderId>1234</orderId>
-      <orderDate>2004-04-15</orderDate>
-      <amountPaid>200 euros</amountPaid>
+      <amountPaid>20</amountPaid>
     </billing>
     <visitors>
-      <visitor id="12345" />
-    </visitors>
+      <visitor id="72981"/>
+    </visitors> 
   </booking>
+  
+  <booking bookingId="45679">
+    <dateOfBooking>12/11/2025</dateOfBooking>
+    <billing>
+      <orderId>1235</orderId>
+      <amountPaid>100</amountPaid>
+    </billing>
+    <visitors>
+      <visitor id="72982"/>
+    </visitors> 
+  </booking>
+  
+  <booking bookingId="45680">
+    <dateOfBooking>1/12/2025</dateOfBooking>
+    <billing>
+      <orderId>1236</orderId>
+      <amountPaid>45</amountPaid>
+    </billing>
+    <visitors>
+      <visitor id="72983"/>
+    </visitors> 
+  </booking>
+  
+  <booking bookingId="45681">
+    <dateOfBooking>29/11/2025</dateOfBooking>
+    <billing>
+      <orderId>1237</orderId>
+      <amountPaid>20</amountPaid>
+    </billing>
+    <visitors>
+      <visitor id="72984"/>
+    </visitors> 
+  </booking>
+  
+  <booking bookingId="45682">
+    <dateOfBooking>28/11/2025</dateOfBooking>
+    <billing>
+      <orderId>1238</orderId>
+      <amountPaid>50</amountPaid>
+    </billing>
+    <visitors>
+      <visitor id="72985"/>
+    </visitors> 
+  </booking>
+  
+  
 </bookings>
