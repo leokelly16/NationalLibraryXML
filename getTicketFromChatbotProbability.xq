@@ -4,10 +4,11 @@ let $c := (/chatbot/chatbotSession/sessionInMinutes)
 let $avg := avg($c)
 
 return 
-
-<AverageSessionInMinutes>
-{$avg}
-</AverageSessionInMinutes>
-<probabilityBuyingTicket>
-{$a div $b}
-</probabilityBuyingTicket>
+<result>
+  <AverageSessionInMinutes>
+  {$avg}
+  </AverageSessionInMinutes>
+  <probabilityBuyingTicket>
+  {$a div $b}
+  </probabilityBuyingTicket>
+</result>
