@@ -9,8 +9,8 @@ declare function local:proportion(
 };
 
 
-let $totalVisitors := count(doc("feedbacks.xml")/feedbacks/feedback)
-let $gaveFeedback  := count(doc("feedbacks.xml")/feedbacks/feedback[gaveFeedback = "true"])
+let $totalVisitors := count(doc("feedback.xml")/feedbacks/feedback)
+let $gaveFeedback  := count(doc("feedback.xml")/feedbacks/feedback[gaveFeedback = "true"])
 
 (: call the function :)
 let $proportion := local:proportion($totalVisitors, $gaveFeedback)
