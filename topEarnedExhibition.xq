@@ -1,17 +1,23 @@
+declare function local:earnings(
+  $exhibition as element(exhibition),
+  $bookings   as element(booking)*
+) as xs:decimal {
+
+  sum(
+    for $vId in $exhibition/visitors/visitor/@id
+    for $b in $bookings[visitors/visitor/@id = $vId]
+    return xs:decimal($b/billing/amountPaid)
+  )
+};
 
 
 let $exhibitions := doc("exhibition.xml")/nationalLibrary/exhibition
 let $bookings    := doc("bookings.xml")/bookings/booking
 
-(:build a list of exhibitions with their total earnings:)  
+(: Build list of exhibitions with calculated earnings :)
 let $exhWithEarnings :=
   for $e in $exhibitions
-  let $total :=
-    sum(
-      for $vId in $e/visitors/visitor/@id
-      for $b in $bookings[visitors/visitor/@id = $vId]
-      return xs:decimal($b/billing/amountPaid)
-    )
+  let $total := local:earnings($e, $bookings)
   order by $total ascending
   return
     <exhibition-earnings
