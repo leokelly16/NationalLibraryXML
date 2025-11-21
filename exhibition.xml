@@ -9,15 +9,13 @@
   <!ELEMENT theme (#PCDATA)>
   <!ELEMENT date (#PCDATA)>
 
-  
   <!ELEMENT visitors (visitor*)>
+  <!ELEMENT visitor EMPTY>
   <!ATTLIST visitor id CDATA #REQUIRED>
-  <!ELEMENT visitor (#PCDATA)>
-  
-  
+
   <!ELEMENT showpieces (showpiece*)>
+  <!ELEMENT showpiece EMPTY>
   <!ATTLIST showpiece id CDATA #REQUIRED>
-  <!ELEMENT showpiece (#PCDATA)>
 ]>
 <nationalLibrary>
   <exhibition id="207">
