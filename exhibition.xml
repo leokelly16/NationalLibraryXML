@@ -2,17 +2,22 @@
 <!DOCTYPE nationalLibrary [
   <!ELEMENT nationalLibrary (exhibition+)>
   <!ELEMENT exhibition (title, description, price, theme, date, visitors, showpieces)>
-  <!ATTLIST exhibition exhibitionId CDATA #REQUIRED>
+  <!ATTLIST exhibition id CDATA #REQUIRED>
   <!ELEMENT title (#PCDATA)>
   <!ELEMENT description (#PCDATA)>
   <!ELEMENT price (#PCDATA)>
   <!ELEMENT theme (#PCDATA)>
+  <!ELEMENT date (#PCDATA)>
+
   
   <!ELEMENT visitors (visitor*)>
   <!ATTLIST visitor id CDATA #REQUIRED>
+  <!ELEMENT visitor (#PCDATA)>
+  
   
   <!ELEMENT showpieces (showpiece*)>
   <!ATTLIST showpiece id CDATA #REQUIRED>
+  <!ELEMENT showpiece (#PCDATA)>
 ]>
 <nationalLibrary>
   <exhibition id="207">
