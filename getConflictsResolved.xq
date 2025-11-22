@@ -10,8 +10,12 @@ let $resolved := doc("security.xml")//securityTeamConflict[conflictResolved = "Y
 (: All conflicts marked as unresolved :)
 let $notResolved := doc("security.xml")//securityTeamConflict[conflictResolved = "No"]
 
+let $c := count($resolved)
+
 (: Sum of all numberOfConflicts fields :)
 let $total := sum(doc("security.xml")//numberOfConflicts)
+
+let $successInResolving := $c div $total
 
 return
 <results>
@@ -34,5 +38,9 @@ return
 
   <!-- Number of total conflicts across exhibitions -->
   <TotalConflicts>{ $total }</TotalConflicts>
+
+  <ResolveSuccess>
+  {$successInResolving}
+  </ResolveSuccess>
 
 </results>
