@@ -5,7 +5,7 @@ let $a := count(/chatbot/chatbotSession[boughtTickets = "Yes"])
 let $b := count(/chatbot/chatbotSession)
 
 (: Extract all session durations :)
-let $c := /chatbot/chatbotSession/sessionInMinutes
+let $c := count(/chatbot/chatbotSession/sessionInMinutes)
 
 (: Calculate average session time :)
 let $avg := avg($c)
