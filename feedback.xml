@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- DTD defining structure of feedback records -->
 <!DOCTYPE feedbacks [
+
+  <!-- Root element containing one or more feedback entries -->
   <!ELEMENT feedbacks (feedback+)>
+
+  <!-- A feedback entry includes visitor info, exhibition visited, and optional rating/response -->
   <!ELEMENT feedback (visitor, exhibition, gaveFeedback, rating?, responseStatus?)>
+
+  <!-- Each feedback entry must have a unique ID -->
   <!ATTLIST feedback feedbackID CDATA #REQUIRED>
+
+  <!-- Visitor element: empty but holds an ID attribute -->
   <!ELEMENT visitor EMPTY>
   <!ATTLIST visitor id CDATA #REQUIRED>
+
+  <!-- Exhibition element: empty but holds an ID attribute -->
   <!ELEMENT exhibition EMPTY>
   <!ATTLIST exhibition id CDATA #REQUIRED>
+
+  <!-- Basic text fields -->
   <!ELEMENT gaveFeedback (#PCDATA)>
   <!ELEMENT rating (#PCDATA)>
   <!ELEMENT responseStatus (#PCDATA)>
 
 ]>
 
+<!-- Root element for all feedback entries -->
 <feedbacks>
 
   <!-- Ellie visited exhibition 207 and gave feedback -->
@@ -48,12 +62,12 @@
     <gaveFeedback>false</gaveFeedback>
   </feedback>
   
-  <!-- Andreas visited exhibition 208 but did not give feedback -->
+  <!-- Andreas visited exhibition 208 and gave feedback -->
   <feedback feedbackID="F005">
     <visitor id="72985" />
     <exhibition id="208" />
     <gaveFeedback>true</gaveFeedback>
-	<rating>5</rating>
+    <rating>5</rating>
     <responseStatus>pending</responseStatus>
   </feedback>
 
