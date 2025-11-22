@@ -1,5 +1,5 @@
 (: Load the exhibition XML document from the database :)
-let $doc := db:get("exhibition.xml")
+let $doc := doc("exhibition.xml")
 
 (: Iterate through each exhibition :)
 for $ex in $doc/nationalLibrary/exhibition
