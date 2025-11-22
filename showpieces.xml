@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD describing the structure of showpieces data -->
 <!DOCTYPE showpieces [
+  <!-- Root element containing one or more showpiece entries -->
   <!ELEMENT showpieces (showpiece+)>
+
+  <!-- Each showpiece must have name, material, and dateOfRelevance -->
   <!ELEMENT showpiece (name, material, dateOfRelevance)>
+
+  <!-- Each showpiece must include an id attribute -->
   <!ATTLIST showpiece id CDATA #REQUIRED>
+
+  <!-- Simple text elements -->
   <!ELEMENT name (#PCDATA)>
   <!ELEMENT material (#PCDATA)>
   <!ELEMENT dateOfRelevance (#PCDATA)>
 ]>
+
+<!-- Root element holding all showpieces -->
 <showpieces>
+
+  <!-- Early 20th-century poem facsimile -->
   <showpiece id="0542">
     <name>The Lake Isle of Inisfree (1924 Facsimile)</name>
     <material>Paper, printed handwriting</material>
     <dateOfRelevance>1924-01-01</dateOfRelevance>
   </showpiece>
+
+  <!-- Notable historical publication -->
   <showpiece id="0543">
     <name>Easter 1916</name>
     <material>Paper, fly leaf of a book</material>
     <dateOfRelevance>1916-09-25</dateOfRelevance>
   </showpiece>
+
+  <!-- Literary first edition -->
   <showpiece id="0622">
     <name>First Edition of Ulysses</name>
     <material>Paper, leather</material>
     <dateOfRelevance>1922-02-02</dateOfRelevance>
   </showpiece>
+
+  <!-- Famous manuscript -->
   <showpiece id="0623">
     <name>The Great Gatsby Manuscript</name>
     <material>Paper, typed</material>
     <dateOfRelevance>1925-04-10</dateOfRelevance>
   </showpiece>
+
+  <!-- Modern cloth-based showpiece -->
   <showpiece id="00001">
     <name>Piece1</name>
     <material>Cloth</material>
     <dateOfRelevance>2004-04-15</dateOfRelevance>
   </showpiece>
+
 </showpieces>
