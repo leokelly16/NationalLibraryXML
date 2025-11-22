@@ -1,8 +1,22 @@
-(: Shows the exhibitions for a specific theme. To input the theme variable in BaseX, press CTRL+SHIFT+E and set name to "theme" and the value to any valid exhibition theme (see exhibition.xml for valid themes). :)
+(: 
+  Shows all exhibitions that match a user-specified theme.
 
+  How to use in BaseX:
+    - Press CTRL + SHIFT + E
+    - Set:
+         name = "theme"
+         value = (any valid exhibition theme)
+  
+  Check exhibition.xml for valid theme values.
+:)
+
+(: External variable for the selected theme :)
 declare variable $theme external;
 
+(: Select exhibitions where the theme matches the user's input :)
 for $e in doc("exhibition.xml")//exhibition[theme = $theme]
+
+  (: Return all key exhibition details :)
   return
     <exhibition>
       {$e/title, $e/description, $e/price, $e/theme, $e/date}
