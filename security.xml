@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+   Tracks security feedback, staffing, and incident reports for different exhibitions.
+   For management of teams, and security protocol
+-->
+
+<!DOCTYPE securityInfo [
+  <!ELEMENT securityInfo (exhibitionSecurity+)>
+  
+  <!-- Individual security assignment for each exhibition -->
+  <!ELEMENT exhibitionSecurity (exhibitionId, invalidTicketCount, securityTeam, feedbackId*, teamSize, securityMeasures)>
+  <!ATTLIST exhibitionSecurity securityId CDATA #REQUIRED>
+  
+  <!-- Security data fields -->
+  <!ELEMENT exhibitionId (#PCDATA)>          <!-- Links to exhibition.xml -->
+  <!ELEMENT invalidTicketCount (#PCDATA)>    <!-- Number of fraudulent tickets caught -->
+  <!ELEMENT securityTeam (member+)>          <!-- List of security personnel (properly structured) -->
+  <!ELEMENT member (#PCDATA)>                <!-- Individual security staff member name -->
+  <!ELEMENT feedbackId (#PCDATA)>            <!-- Links to relevant feedback records -->
+  <!ELEMENT teamSize (#PCDATA)>              <!-- Number of security staff -->
+  <!ELEMENT securityMeasures (#PCDATA)>      <!-- Equipment and procedures used -->
+]>
+
+<!-- Security Data Records -->
+<securityInfo>
+  <!-- Security assignment for Exhibition 207 - Yeats Poetry -->
+  <exhibitionSecurity securityId="SEC001">
+    <exhibitionId>207</exhibitionId>
+    <invalidTicketCount>1</invalidTicketCount>
+    <!-- Employees working security -->
+    <securityTeam>
+      <member>John Smith</member>
+      <member>Maria Garcia</member>      
+      <member>Robert Johnson</member>
+      <member>Sarah Williams</member>
+    </securityTeam>
+    <!-- Relevant feedback -->>
+    <feedbackId>F001</feedbackId>        
+    <feedbackId>F002</feedbackId>
+    <teamSize>4</teamSize>               
+    <securityMeasures>CCTV surveillance, ticket inspection, security personnel</securityMeasures>
+  </exhibitionSecurity>
+  
+  <!-- Security assignment for Exhibition 208 - Modern Literature -->
+  <exhibitionSecurity securityId="SEC002">
+    <exhibitionId>208</exhibitionId>
+    <invalidTicketCount>3</invalidTicketCount>
+    <!-- Employees working security -->
+    <securityTeam>
+      <member>Michael Brown</member>
+      <member>Maria Garcia</member>
+      <member>Lisa Davis</member>
+      <member>David Wilson</member>
+      <member>Jennifer Miller</member>
+      <member>James Taylor</member>
+      <member>Patricia Anderson</member>
+    </securityTeam>
+    <!-- Relevant feedback -->
+    <feedbackId>F003</feedbackId>
+    <feedbackId>F004</feedbackId>
+    <feedbackId>F005</feedbackId>
+    <teamSize>7</teamSize>               
+    <securityMeasures>ticket inspection, bag inspection, security personnel</securityMeasures>
+  </exhibitionSecurity>
+</securityInfo>
