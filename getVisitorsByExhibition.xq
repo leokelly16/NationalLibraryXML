@@ -1,11 +1,27 @@
-(: Gets all visitors who attended a specific exhibition. To input the exhibitionId variable in BaseX, press CTRL+SHIFT+E and set name to exhibitionID and the value to the matching exhibitionID you want information for (see exhibition.xml for valid id's for exhibitons). :)
+(: 
+  Gets all visitors who attended a specific exhibition.
 
+  To input the exhibitionId variable in BaseX:
+  - Press CTRL + SHIFT + E
+  - Set the variable name to: exhibitionID
+  - Set the value to the exhibition ID you want to query
+  (See exhibition.xml for valid exhibition IDs.)
+:)
+
+(: External variable for the chosen exhibition ID :)
 declare variable $exhibitionId external;
 
+(: Loop through the exhibition with the matching ID :)
 for $e in doc("exhibition.xml")//exhibition[@id = $exhibitionId]
+
+  (: Find each visitor listed inside that exhibition :)
   for $v in $e//visitor
+
+    (: Retrieve full visitor info based on visitor ID :)
     let $info := doc("visitors.xml")//visitor[@id = $v/@id]
-      return
-        <visitor>
-          {$info/name, $info/email}
-        </visitor>
+
+    (: Return visitor name + email :)
+    return
+      <visitor>
+        {$info/name, $info/email}
+      </visitor>
