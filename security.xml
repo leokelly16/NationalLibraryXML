@@ -1,51 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-   Tracks security feedback, staffing, and incident reports for different exhibitions.
-   For management of teams, and security protocol
+   Tracks security feedback, staffing, and incident reports 
+   for different exhibitions in the library.
+   Helps manage security teams and incident resolution.
 -->
 
 <!DOCTYPE securityInfo [
   <!ELEMENT securityInfo (exhibitionSecurity+)>
   
-  <!-- Individual security assignment for each exhibition -->
-  <!ELEMENT exhibitionSecurity (exhibitionId, invalidTicketCount, securityTeam, feedbackId*, teamSize, securityMeasures)>
+  <!-- Each exhibition has its own security record -->
+  <!ELEMENT exhibitionSecurity 
+    (exhibitionId, invalidTicketCount, securityTeam, feedbackId*, 
+     teamSize, securityMeasures, conflicts+, numberOfConflicts)>
   <!ATTLIST exhibitionSecurity securityId CDATA #REQUIRED>
   
-  <!-- Security data fields -->
-  <!ELEMENT exhibitionId (#PCDATA)>          <!-- Links to exhibition.xml -->
-  <!ELEMENT invalidTicketCount (#PCDATA)>    <!-- Number of fraudulent tickets caught -->
-  <!ELEMENT securityTeam (member+)>          <!-- List of security personnel (properly structured) -->
-  <!ELEMENT member (#PCDATA)>                <!-- Individual security staff member name -->
-  <!ELEMENT feedbackId (#PCDATA)>            <!-- Links to relevant feedback records -->
-  <!ELEMENT teamSize (#PCDATA)>              <!-- Number of security staff -->
-  <!ELEMENT securityMeasures (#PCDATA)>      <!-- Equipment and procedures used -->
+  <!-- Basic data fields -->
+  <!ELEMENT exhibitionId (#PCDATA)>             <!-- Links to exhibition.xml -->
+  <!ELEMENT invalidTicketCount (#PCDATA)>       <!-- Fraudulent ticket count -->
+  <!ELEMENT securityTeam (member+)>             <!-- List of security staff -->
+  <!ELEMENT member (#PCDATA)>                   <!-- Name of one staff member -->
+  <!ELEMENT feedbackId (#PCDATA)>               <!-- Links to feedback.xml -->
+  <!ELEMENT teamSize (#PCDATA)>                 <!-- Number of security staff -->
+  <!ELEMENT securityMeasures (#PCDATA)>         <!-- Equipment and procedures -->
+
+  <!-- Conflict reporting section -->
+  <!ELEMENT conflicts (conflict*)>              <!-- Each block holds conflicts -->
+  <!ELEMENT conflict (securityTeamConflict)>    <!-- One conflict entry -->
+  <!ELEMENT securityTeamConflict (conflictResolved*)>
+  <!ATTLIST securityTeamConflict conflictMember CDATA #REQUIRED>
+
+  <!-- Whether the conflict was resolved -->
+  <!ELEMENT conflictResolved (#PCDATA)>
+
+  <!-- Total number of conflicts recorded -->
+  <!ELEMENT numberOfConflicts (#PCDATA)>
 ]>
 
 <!-- Security Data Records -->
 <securityInfo>
-  <!-- Security assignment for Exhibition 207 - Yeats Poetry -->
+
+  <!-- Security assignment for Exhibition 207 -->
   <exhibitionSecurity securityId="SEC001">
     <exhibitionId>207</exhibitionId>
     <invalidTicketCount>1</invalidTicketCount>
-    <!-- Employees working security -->
+
+    <!-- Staff on duty -->
     <securityTeam>
       <member>John Smith</member>
-      <member>Maria Garcia</member>      
+      <member>Maria Garcia</member>
       <member>Robert Johnson</member>
       <member>Sarah Williams</member>
     </securityTeam>
-    <!-- Relevant feedback -->>
-    <feedbackId>F001</feedbackId>        
+
+    <!-- Feedback connected to encounters -->
+    <feedbackId>F001</feedbackId>
     <feedbackId>F002</feedbackId>
-    <teamSize>4</teamSize>               
+
+    <teamSize>4</teamSize>
     <securityMeasures>CCTV surveillance, ticket inspection, security personnel</securityMeasures>
+
+    <!-- One recorded conflict -->
+    <conflicts>
+      <conflict>
+        <securityTeamConflict conflictMember="John Smith">
+          <conflictResolved>Yes</conflictResolved>
+        </securityTeamConflict>
+      </conflict>
+    </conflicts>
+
+    <!-- Total conflicts counted -->
+    <numberOfConflicts>1</numberOfConflicts>
   </exhibitionSecurity>
-  
-  <!-- Security assignment for Exhibition 208 - Modern Literature -->
+
+
+  <!-- Security assignment for Exhibition 208 -->
   <exhibitionSecurity securityId="SEC002">
     <exhibitionId>208</exhibitionId>
     <invalidTicketCount>3</invalidTicketCount>
-    <!-- Employees working security -->
+
+    <!-- Staff on duty -->
     <securityTeam>
       <member>Michael Brown</member>
       <member>Maria Garcia</member>
@@ -55,11 +88,35 @@
       <member>James Taylor</member>
       <member>Patricia Anderson</member>
     </securityTeam>
-    <!-- Relevant feedback -->
+
+    <!-- Feedback connected to encounters -->
     <feedbackId>F003</feedbackId>
     <feedbackId>F004</feedbackId>
     <feedbackId>F005</feedbackId>
-    <teamSize>7</teamSize>               
+
+    <teamSize>7</teamSize>
     <securityMeasures>ticket inspection, bag inspection, security personnel</securityMeasures>
+
+    <!-- First conflict -->
+    <conflicts>
+      <conflict>
+        <securityTeamConflict conflictMember="Michael Brown">
+          <conflictResolved>Yes</conflictResolved>
+        </securityTeamConflict>
+      </conflict>
+    </conflicts>
+
+    <!-- Second conflict -->
+    <conflicts>
+      <conflict>
+        <securityTeamConflict conflictMember="Maria Garcia">
+          <conflictResolved>No</conflictResolved>
+        </securityTeamConflict>
+      </conflict>
+    </conflicts>
+
+    <!-- Total conflicts counted -->
+    <numberOfConflicts>2</numberOfConflicts>
   </exhibitionSecurity>
+
 </securityInfo>
