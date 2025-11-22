@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Root element containing all bookings -->
+
 <!DOCTYPE bookings [
-  <!ELEMENT bookings (booking+)>
-  <!ELEMENT booking (dateOfBooking, billing, visitors)>
-  <!ATTLIST booking bookingId CDATA #REQUIRED>
-  <!ELEMENT dateOfBooking (#PCDATA)>
+<!-- bookings must contain one or more booking elements -->
+  <!ELEMENT bookings (booking+)> 
+
+<!-- Each booking has a date, billing info, and visitors -->
+  <!ELEMENT booking (dateOfBooking, billing, visitors)> 
+<!-- bookingId is a required attribute -->
+  <!ATTLIST booking bookingId CDATA #REQUIRED> 
+  
+<!-- Booking date as text -->
+  <!ELEMENT dateOfBooking (#PCDATA)> 
+
+<!-- Billing contains an order ID and amount paid -->
   <!ELEMENT billing (orderId, amountPaid)>
+<!-- Order ID as text -->  
   <!ELEMENT orderId (#PCDATA)>
-  <!ELEMENT amountPaid (#PCDATA)>
-  <!ELEMENT visitors (visitor+)>
+<!-- Amount paid as text -->  
+  <!ELEMENT amountPaid (#PCDATA)> 
+
+<!-- One or more visitors in each booking -->
+  <!ELEMENT visitors (visitor+)> 
+
+<!-- Visitor element has no inner text -->
   <!ELEMENT visitor EMPTY>
-  <!ATTLIST visitor id CDATA #REQUIRED>
+<!-- Visitor must have an id attribute -->  
+  <!ATTLIST visitor id CDATA #REQUIRED> 
 ]>
 
 <bookings>
   
+  <!-- Booking 1 -->
   <booking bookingId="45678">
     <dateOfBooking>13/11/2025</dateOfBooking>
     <billing>
@@ -25,6 +43,7 @@
     </visitors> 
   </booking>
   
+  <!-- Booking 2 -->
   <booking bookingId="45679">
     <dateOfBooking>12/11/2025</dateOfBooking>
     <billing>
@@ -36,6 +55,7 @@
     </visitors> 
   </booking>
   
+  <!-- Booking 3 -->
   <booking bookingId="45680">
     <dateOfBooking>1/12/2025</dateOfBooking>
     <billing>
@@ -47,6 +67,7 @@
     </visitors> 
   </booking>
   
+  <!-- Booking 4 -->
   <booking bookingId="45681">
     <dateOfBooking>29/11/2025</dateOfBooking>
     <billing>
@@ -58,6 +79,7 @@
     </visitors> 
   </booking>
   
+  <!-- Booking 5 -->
   <booking bookingId="45682">
     <dateOfBooking>28/11/2025</dateOfBooking>
     <billing>
@@ -68,6 +90,5 @@
       <visitor id="72985"/>
     </visitors> 
   </booking>
-  
-  
+
 </bookings>

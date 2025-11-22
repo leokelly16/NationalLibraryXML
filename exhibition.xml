@@ -1,58 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Root element representing the National Library -->
+
 <!DOCTYPE nationalLibrary [
+  <!-- Root contains one or more exhibitions -->
   <!ELEMENT nationalLibrary (exhibition+)>
+
+  <!-- Each exhibition has core details plus visitors and showpieces -->
   <!ELEMENT exhibition (title, description, price, theme, date, visitors, showpieces)>
-  <!ATTLIST exhibition id CDATA #REQUIRED>
+  <!ATTLIST exhibition id CDATA #REQUIRED>  <!-- Exhibition must have an id -->
+
+  <!-- Exhibition details as text elements -->
   <!ELEMENT title (#PCDATA)>
   <!ELEMENT description (#PCDATA)>
   <!ELEMENT price (#PCDATA)>
   <!ELEMENT theme (#PCDATA)>
   <!ELEMENT date (#PCDATA)>
 
+  <!-- Visitor list (zero or more visitors allowed) -->
   <!ELEMENT visitors (visitor*)>
-  <!ELEMENT visitor EMPTY>
-  <!ATTLIST visitor id CDATA #REQUIRED>
+  <!ELEMENT visitor EMPTY>   <!-- Visitor has no inner text -->
+  <!ATTLIST visitor id CDATA #REQUIRED>  <!-- Visitor id required -->
 
+  <!-- Showpieces list (zero or more showpieces allowed) -->
   <!ELEMENT showpieces (showpiece*)>
-  <!ELEMENT showpiece EMPTY>
-  <!ATTLIST showpiece id CDATA #REQUIRED>
+  <!ELEMENT showpiece EMPTY>  <!-- Showpiece has no inner text -->
+  <!ATTLIST showpiece id CDATA #REQUIRED>  <!-- Showpiece id required -->
 ]>
+
 <nationalLibrary>
+
+  <!-- Exhibition 1 -->
   <exhibition id="207">
-  
+
     <title>Yeats: The Life and Works of William Butler Yeats</title>
     <description>A collection of works and manuscripts from the Irish poet, W.B Yeats.</description>
     <price>10.50</price>
     <theme>Poetry</theme>
-	<date>1/12/2025</date>
-    
+    <date>1/12/2025</date>
+
+    <!-- List of visitors attending this exhibition -->
     <visitors>
       <visitor id="72981" />
       <visitor id="72982" />
     </visitors>
-    
+
+    <!-- Items displayed in the exhibition -->
     <showpieces>
       <showpiece id="0542" />
       <showpiece id="0543" />
     </showpieces>
   </exhibition>
 
+  <!-- Exhibition 2 -->
   <exhibition id="208">
+
     <title>Modern Literature Showcase</title>
     <description>Celebrating 20th-century literary classics and authors.</description>
     <price>12.00</price>
     <theme>Literary</theme>
-	<date>15/11/2025</date>
-    
+    <date>15/11/2025</date>
+
+    <!-- List of visitors attending this exhibition -->
     <visitors>
       <visitor id="72983" />
       <visitor id="72984" />
-	  <visitor id="72985" />
+      <visitor id="72985" />
     </visitors>
-    
+
+    <!-- Items displayed in the exhibition -->
     <showpieces>
       <showpiece id="0622" />
       <showpiece id="0623" />
     </showpieces>
   </exhibition>
+
 </nationalLibrary>

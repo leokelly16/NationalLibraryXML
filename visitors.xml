@@ -1,36 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Root element containing all visitors -->
+
 <!DOCTYPE visitors [
+  <!-- 'visitors' element must contain one or more 'visitor' children -->
   <!ELEMENT visitors (visitor+)>
-  <!ELEMENT visitor (name, email,nationality)>
+
+  <!-- Each visitor has a name, email, and nationality -->
+  <!ELEMENT visitor (name, email, nationality)>
+  
+  <!-- Each visitor must have an id attribute -->
   <!ATTLIST visitor id CDATA #REQUIRED>
+
+  <!-- Visitor's name as text -->
   <!ELEMENT name (#PCDATA)>
+
+  <!-- Visitor's email as text -->
   <!ELEMENT email (#PCDATA)>
+
+  <!-- Visitor's nationality as text -->
   <!ELEMENT nationality (#PCDATA)>
 ]>
+
 <visitors>
+
+  <!-- Visitor 1 -->
   <visitor id="72981">
     <name>Ellie Hartman</name>
     <email>ehartman@gmail.com</email>
     <nationality>Irish</nationality>
   </visitor>
+
+  <!-- Visitor 2 -->
   <visitor id="72982">
     <name>James O'Connor</name>
     <email>connor.james@gmail.com</email>
     <nationality>Irish</nationality>
   </visitor>
+
+  <!-- Visitor 3 -->
   <visitor id="72983">
     <name>Patrick Kineely</name>
     <email>kinpatrick02@gmail.com</email>
     <nationality>Spanish</nationality>
   </visitor>
+
+  <!-- Visitor 4 -->
   <visitor id="72984">
     <name>Milly Donnolly</name>
     <email>millydon98@gmail.com</email>
     <nationality>French</nationality>
   </visitor>
+
+  <!-- Visitor 5 -->
   <visitor id="72985">
     <name>Andreas Mama</name>
     <email>andreas15@gmail.com</email>
     <nationality>Greek</nationality>
   </visitor>
+
 </visitors>
